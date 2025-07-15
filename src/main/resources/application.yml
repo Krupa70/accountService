@@ -27,3 +27,23 @@ logging:
     org.springframework.boot.autoconfigure.sql.init: DEBUG
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+# SpringDoc OpenAPI Configuration
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html # Customize the Swagger UI URL
+  api-docs:
+    path: /v3/api-docs # Customize the OpenAPI JSON URL
+  show-actuator: true # If you use Spring Boot Actuator, this will include its endpoints
+  info:
+    title: Account Service API
+    description: API for managing bank accounts and balances
+    version: 1.0.0
+    terms-of-service: http://swagger.io/terms/
+    contact:
+      name: Kp
+      url:
+      email:
+    license:
+      name: Apache 2.0
+      url: http://www.apache.org/licenses/LICENSE-2.0.html

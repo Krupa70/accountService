@@ -20,3 +20,6 @@ curl http://localhost:8080/api/accounts/999/balance
 
 # Access H2 Console
 http://localhost:8080/h2-console
+
+# Once your application is running, open your web browser and navigate to:
+http://localhost:8080/swagger-ui.html (or whatever springdoc.swagger-ui.path you configured).
