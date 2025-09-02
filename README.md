@@ -3,6 +3,7 @@ testing spring boot rest  services
 
 # How to Run
 Build: ./gradlew build
+-Dspring.profiles.active=local
 Run: ./gradlew bootRun
 Test: curl http://localhost:8080/api/accounts/1/balance
 
