@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: accountService
+  profiles:
+    active: dev
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+server:
+  port: 8080
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.boot.autoconfigure.sql.init: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+# SpringDoc OpenAPI Configuration
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html # Customize the Swagger UI URL
+  api-docs:
+    path: /v3/api-docs # Customize the OpenAPI JSON URL
+  show-actuator: true # If you use Spring Boot Actuator, this will include its endpoints
+  info:
+    title: Account Service API
+    description: API for managing bank accounts and balances
+    version: 1.0.0
+    terms-of-service: http://swagger.io/terms/
+    contact:
+      name: Kp
+      url:
+      email:
+    license:
+      name: Apache 2.0
+      url: http://www.apache.org/licenses/LICENSE-2.0.html
+# -- Gemini API Configuration --
+# IMPORTANT: Replace YOUR_API_KEY_HERE with your actual Google AI Studio API key
+gemini:
+  api:
+    key: AIzaSyCzgBMyYsAGqAs27uyTxXzOk2NsPCDyZxs
+  model:
+    name: gemini-2.5-flash
